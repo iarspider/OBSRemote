@@ -1,0 +1,14 @@
+.idea/
+*.png
+*.log
+*.list
+*.err
+*.html
+*.json
+*.sh
+*.C
+*.pyc
+*.textile
+*.bak
+*.ttf
+*example*
