@@ -109,8 +109,8 @@ class StatusBar(Frame):
         self.label = Label(self, bd=1, relief=SUNKEN, anchor=W)
         self.label.pack(fill=X)
 
-    def set(self, format_, *args):
-        self.label.config(text=format_ % args)
+    def set(self, text):
+        self.label.config(text=text)
         self.label.update_idletasks()
 
     def clear(self):
@@ -433,11 +433,11 @@ class MyFirstGUI:
         else:
             self.on_recstatus('off')
 
-        self.status.set("FPS: {0}, Bitrate: {1}, dropped frames {2} ({3} %)".format(ev.getFPS(), ev.getKbitsPerSec(),
+        self.status.set("FPS: {0}, Bitrate: {1}, dropped frames {2} ({3} %)".format(ev.getFps(), ev.getKbitsPerSec(),
                                                                                     ev.getNumDroppedFrames(),
                                                                                     ev.getStrain()))
 
-        self.logger.debug("FPS: {0}, Bitrate: {1}, dropped frames {2} ({3} %)".format(ev.getFPS(), ev.getKbitsPerSec(),
+        self.logger.debug("FPS: {0}, Bitrate: {1}, dropped frames {2} ({3} %)".format(ev.getFps(), ev.getKbitsPerSec(),
                                                                                       ev.getNumDroppedFrames(),
                                                                                       ev.getStrain()))
         pass
